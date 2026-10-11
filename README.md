@@ -41,10 +41,16 @@ npm run preview
 
 独立 HTTPS 页面可完整运行。若使用 iframe，请允许脚本、同源存储、打开新窗口及文件下载（常见 sandbox 权限为 `allow-scripts allow-same-origin allow-popups allow-downloads`；PDF 新窗口可能还需 `allow-popups-to-escape-sandbox`）。权限由平台控制，源码无法绕过。
 
-尚未在 REDcowork 真正导入并发布；已完成独立静态环境和 iframe 条件测试，不能以本地通过代替平台验收。
+旧版已由项目拥有者在 REDcowork 发布。本次 v18 更新需要平台重新拉取、构建和发布；仓库更新与本地验收不等于平台线上版本已同步。
 
 系统字体会随操作系统略有差别。Logo 已随仓库提供；页面不依赖远程字体、CDN 或运行时 npm 网络请求。
 
 ## 导入 REDcowork
 
 见 [REDcowork 导入提示词](RED_COWORK_IMPORT.md)。保留现有源码、布局和数据，直接启动或构建，不要根据产品描述重新生成页面。
+
+## v18 完整产品更新
+
+保留全部 V1/V2/V3/未来阶段和原有研究内容；没有用单路径样稿替代产品。新增可核对的新旧引用清单、持久化草稿、发送后的本轮记录与追问、跨轮次定位与返回。历史和已发送内容保持快照，继续不提供“更新判断”。
+
+50项单元测试通过；完整产品浏览器验收记录见 `verification/full-product-v18-results.json`。使用已安装的Playwright执行 `verification/full-product-v18-check.mjs`，可通过 `PLAYWRIGHT_MODULE` 指定模块路径、`PREVIEW_URL` 指定静态预览地址。
